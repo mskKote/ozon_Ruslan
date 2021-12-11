@@ -1,0 +1,90 @@
+.good-card {
+    background   : var(--card-bg);
+    box-shadow   : 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    height       : 38vh;
+    position     : relative;
+}
+
+.good-description {
+    display        : flex;
+    justify-content: space-around;
+    align-items    : center;
+    height         : calc(40% - 5px);
+}
+
+.good-actions>div,
+.good-info {
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-evenly;
+}
+
+.good-info,
+.good-actions {
+    height  : 100%;
+    width   : 40%;
+    position: relative;
+}
+
+
+
+img.image {
+    filter         : drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.15));
+    border-radius  : 5px 5px 0px 0px;
+    width          : 100%;
+    height         : 60%;
+    object-fit     : cover;
+    object-position: center;
+}
+
+img.decor-1 {
+    position: absolute;
+    right   : 0.25rem;
+    top     : 1.25rem;
+    width   : 1.5rem;
+}
+
+img.decor-2 {
+    position: absolute;
+    right   : -1rem;
+    bottom  : 0rem;
+    width   : 3rem;
+}
+
+
+/** Элементы */
+button.buyBtn {
+    border-radius: 5px;
+}
+
+h3.name {
+    font-family   : Jost;
+    font-style    : normal;
+    font-weight   : normal;
+    font-size     : 1.5rem;
+    letter-spacing: 0.06em;
+    color         : var(--card-name-color);
+    margin        : 0;
+}
+
+h3.price {
+    font-family   : Oswald;
+    font-style    : normal;
+    font-weight   : normal;
+    font-size     : 1.75rem;
+    letter-spacing: 0.09em;
+    color         : var(--card-price-color);
+    margin        : 0;
+}
+
+p.author {
+    font-family   : Jost;
+    font-style    : italic;
+    font-weight   : normal;
+    font-size     : 1.25rem;
+    letter-spacing: 0.09em;
+    color         : var(--card-author-color);
+    margin        : 0;
+}

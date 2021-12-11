@@ -1,0 +1,72 @@
+@import "./buttons.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./card.css";
+@import "./filters.css";
+
+
+/** Переменные */
+:root {
+	--background-color   : #0D0D0D;
+	--header-text-color  : #F5F5F5;
+	--header-logout-color: #EE403E;
+	--filter-text-color  : rgba(245, 245, 245, 0.9);
+	--card-bg            : rgba(245, 245, 245, 0.9);
+	--card-btn-bg        : #0058ED;
+	--card-btn-color     : #FFFFFF;
+
+	--card-name-color  : rgba(3, 3, 3, 0.9);
+	--card-author-color: rgba(3, 3, 3, 0.6);
+	--card-price-color : #030303;
+	--active-btn-bg    : #0058ED;
+	--active-btn-color : #FFFFFF;
+	--scrollbar-color  : #8f54a0;
+}
+
+
+body {
+	background-color: var(--background-color);
+	margin          : 0;
+	padding         : 0;
+	overflow        : hidden;
+}
+
+div.desktop-wrapper {
+	display        : flex;
+	justify-content: space-around;
+}
+
+
+.goods-cards-container {
+	height               : 80vh;
+	width                : 100%;
+	overflow-y           : auto;
+	display              : grid;
+	grid-template-columns: minmax(10vw, 1fr) minmax(10vw, 1fr);
+	grid-column-gap      : 2rem;
+	grid-row-gap         : 4vh;
+	justify-content      : space-evenly;
+	width                : 60%;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--scrollbar-color);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 40px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--background-color);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--scrollbar-color);
+	border-radius   : 40px;
+	border          : 16px solid var(--background-color);
+}

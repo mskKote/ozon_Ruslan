@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store</title>
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Montserrat&family=Oswald&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+  <header>
+    <h1>Store</h1>
+    <menu>
+      <li><a>Profile</a></li>
+      <li><a>Store</a></li>
+      <li><a>Cart</a></li>
+      <li><a class="logout" onclick="logout()">Logout</a></li>
+    </menu>
+  </header>
+  <div class="desktop-wrapper">
+
+    <div class="filters-container">
+      <h2>Apply filters</h2>
+      <div class="filters">
+        <div class="filter">
+          <p>Seller name</p>
+          <input type="text" onchange="changeSeller(event)" class="filter-name">
+        </div>
+        <div class="filter">
+          <p>Price range</p>
+          <div class="range">
+            <input type="number" min="0" data-filter="min" onchange="changePriceRange(event)" class="filter-price">
+            <input type="number" min="0" data-filter="max" onchange="changePriceRange(event)" class="filter-price">
+          </div>
+        </div>
+      </div>
+      <h3>Pick a category</h3>
+      <div class="categories">
+        <button class="category" onclick="applyFilter(event)" data-filter="Music">Music</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Sport">Sport</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Electronics">Electronics</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Clothes">Clothes</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Home">Home</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Beauty">Beauty</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Games">Games</button>
+        <button class="category" onclick="applyFilter(event)" data-filter="Books">Books</button>
+      </div>
+
+      <footer>
+        <img src="./assets/mouse.png" alt="Мышь">
+        <button class="action">More</button>
+        <div class="line"></div>
+      </footer>
+    </div>
+
+    <div class="goods-cards-container scrollbar"></div>
+
+    <template class="good-card-template">
+      <div class="good-card">
+        <img class="image" src="" alt="Изображение товара">
+        <div class="good-description">
+          <div class="good-info">
+            <h3 class="name"></h3>
+            <p class="author"></p>
+          </div>
+          <div class="good-actions">
+            <div>
+              <h3 class="price"></h3>
+              <button class="action buyBtn">To Cart</button>
+            </div>
+            <img class="decor-1" src="./assets/arrow.svg" alt="Стрелка">
+            <img class="decor-2" src="./assets/ellipse.svg" alt="Овал">
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+  <script src="./js/script.js"></script>
+  <script src="./js/filters.js"></script>
+</body>
+
+</html>
